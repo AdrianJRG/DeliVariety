@@ -430,3 +430,27 @@ p {
     width: 100%; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
+
+
+
+ .to-top {
+   background: none;
+   margin: 0;
+   position: fixed;
+   bottom: 40px;
+   right: 0;
+   width: 70px;
+   height: 70px;
+   z-index: 100;
+   display: none;
+   text-decoration: none;
+   color: #7ac943;
+   //background-color: #ff9000;
+ }
+
+  .to-top i {
+    font-size: 60px;
+    width: 500px;
+  }
+
+
