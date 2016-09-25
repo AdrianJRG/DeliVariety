@@ -34,6 +34,28 @@ $(document).ready(function () {
         })
     });
 
+    $(".tableImage").hover(function() {
+        if ($(this).is(".selectedTable") === false){
+            $(this).attr('src', 'img/table_selected.jpg');
+        }
+    }, function() {
+        if ($(this).is(".selectedTable") === false) {
+            $(this).attr('src', 'img/table.jpg');
+        }
+    });
+
+    $(".tableImage").one("click", selectSeats);
+    
+    function selectSeats() {
+        $(this).addClass("selectedTable");
+        $(this).one("click", deselectSeats);
+    }
+
+    function deselectSeats() {
+        $(this).removeClass("selectedTable");
+        $(this).one("click", selectSeats);
+    }
+
     $bgMenu.click(showMenu);
     $btnClose.click(closeMenu);
 })
